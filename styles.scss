@@ -1,0 +1,33 @@
+$colorrojo:#fa5f49;
+@mixin EstiloLetra{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.tarjeta{
+    background-color: #585858;
+    border-radius: 15px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin-bottom: 50px;
+    .tarjeta__img{
+        @extend.tarjeta;
+        width: 300px;
+        height: 180px;
+        margin-right: 30px;
+    }
+    .tarjeta__titulo{
+        color: $colorrojo;
+        font-size: 1.5rem;
+        margin-bottom: 20px;
+        @include EstiloLetra();
+    }
+    .tarjeta__parrafo{
+        line-height: 28px;
+        font-size: 1rem;
+    }
+    li{
+        color: white;
+        @include EstiloLetra();
+    }
+}
